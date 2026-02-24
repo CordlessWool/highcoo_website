@@ -1,0 +1,59 @@
+---
+import Base from '../layouts/Base.astro';
+---
+
+<Base title="Page Not Found" description="The page you were looking for doesn't exist.">
+  <section class="not-found">
+    <div class="container">
+      <p class="eyebrow">404</p>
+      <h1>Lost in the field</h1>
+      <p class="subtitle">
+        This page has wandered off. Probably somewhere scenic.
+      </p>
+      <div class="actions">
+        <a href="/" class="btn btn--primary">Back to home</a>
+        <a href="/blog" class="btn btn--secondary">Read the blog</a>
+      </div>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .not-found {
+    padding: var(--space-2xl) 0;
+    text-align: center;
+  }
+
+  .not-found .container {
+    max-width: 480px;
+  }
+
+  .eyebrow {
+    font-family: var(--font-display);
+    font-size: 6rem;
+    font-weight: 300;
+    color: var(--color-border);
+    line-height: 1;
+    margin: 0 0 var(--space-md);
+    letter-spacing: -0.04em;
+    max-width: none;
+  }
+
+  .not-found h1 {
+    font-size: clamp(2rem, 4vw + 0.5rem, 3rem);
+    margin-bottom: var(--space-md);
+  }
+
+  .subtitle {
+    color: var(--color-text-muted);
+    font-size: 1.1rem;
+    margin: 0 auto var(--space-xl);
+  }
+
+  .actions {
+    display: flex;
+    justify-content: center;
+    gap: var(--space-md);
+    flex-wrap: wrap;
+  }
+</style>

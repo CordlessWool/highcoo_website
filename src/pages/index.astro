@@ -1,0 +1,307 @@
+---
+import Base from '../layouts/Base.astro';
+import BlogCard from '../components/BlogCard.astro';
+import { getCollection } from 'astro:content';
+
+const posts = (await getCollection('blog'))
+  .filter((p) => !p.data.draft)
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
+  .slice(0, 3);
+---
+
+<Base title="Highcoo">
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <h1>The backend for your photo&nbsp;blog</h1>
+        <p class="hero-subtitle">
+          Tag, organize, and publish your photos.<br />
+          Self-hosted. Open source. Yours.
+        </p>
+        <div class="hero-actions">
+          <a href="https://demo.highcoo.studio" class="btn btn--primary">View Demo</a>
+          <a href="https://docs.highcoo.studio" class="btn btn--secondary">Get Started</a>
+        </div>
+      </div>
+      <div class="hero-image screenshot-frame">
+        <img
+          src="/images/highcoo-filter.jpeg"
+          alt="Highcoo media grid with tag filter open, showing highland cow photos"
+          width="1390"
+          height="1035"
+          loading="eager"
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- Problem -->
+  <section class="problem">
+    <div class="container">
+      <p>
+        Your best photos are stuck on a hard drive. Edited, forgotten, never published.
+        Getting them onto your blog shouldn't require a spreadsheet and three different tools.
+      </p>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section class="feature section">
+    <div class="container">
+      <div class="feature-grid">
+        <div class="feature-text">
+          <h2>Tag everything. Find&nbsp;anything.</h2>
+          <p>
+            Forget folders. Tag your images however makes sense to you — by project,
+            location, mood, subject. Filter instantly. Select in bulk.
+            Your library, finally searchable.
+          </p>
+        </div>
+        <div class="feature-image screenshot-frame">
+          <img
+            src="/images/highcoo-filter-light.jpeg"
+            alt="Highcoo tags management view showing tag organization with colors and slugs"
+            width="1390"
+            height="1035"
+            loading="lazy"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="feature feature--reverse section section--alt">
+    <div class="container">
+      <div class="feature-grid">
+        <div class="feature-text">
+          <h2>From library to&nbsp;published</h2>
+          <p>
+            Select a photo, fill in the details, hit publish.
+            Highcoo handles the slug, tags, and API — so your blog
+            can pull the image straight from your own server.
+          </p>
+        </div>
+        <div class="feature-image screenshot-frame">
+          <img
+            src="/images/highcoo-edit.jpeg"
+            alt="Highcoo publish dialog for a highland cow photo, showing name, slug, and tag fields"
+            width="1431"
+            height="1294"
+            loading="lazy"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Self-hosted callout -->
+  <section class="selfhosted section">
+    <div class="container">
+      <div class="selfhosted-content">
+        <h2>Your photos, your&nbsp;server</h2>
+        <p>
+          No subscriptions. No vendor lock-in. Host it yourself, own your data,
+          inspect the code. Free forever.
+        </p>
+        <a href="https://github.com/your-username/highcoo" class="btn btn--secondary">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+          </svg>
+          View on GitHub
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Blog preview -->
+  {posts.length > 0 && (
+    <section class="blog-preview section section--alt">
+      <div class="container">
+        <div class="blog-header">
+          <h2>From the blog</h2>
+          <a href="/blog">All posts →</a>
+        </div>
+        <div class="blog-grid">
+          {posts.map((post) => <BlogCard post={post} />)}
+        </div>
+      </div>
+    </section>
+  )}
+
+  <!-- Final CTA -->
+  <section class="cta section">
+    <div class="container">
+      <h2>Ready to get started?</h2>
+      <div class="cta-actions">
+        <a href="https://github.com/your-username/highcoo" class="btn btn--primary">GitHub</a>
+        <a href="https://docs.highcoo.studio" class="btn btn--secondary">Documentation</a>
+        <a href="https://demo.highcoo.studio" class="btn btn--secondary">Try the Demo</a>
+      </div>
+    </div>
+  </section>
+</Base>
+
+<style>
+  /* ── Hero ──────────────────────────────────────── */
+  .hero {
+    padding: var(--space-2xl) 0 var(--space-xl);
+    overflow: hidden;
+  }
+
+  .hero-grid {
+    display: grid;
+    gap: var(--space-xl);
+    align-items: center;
+  }
+
+  @media (min-width: 900px) {
+    .hero-grid {
+      grid-template-columns: 1fr 1.2fr;
+      gap: var(--space-2xl);
+    }
+  }
+
+  .hero-content {
+    max-width: 560px;
+  }
+
+  .hero-subtitle {
+    font-size: 1.2rem;
+    color: var(--color-text-muted);
+    margin-top: var(--space-md);
+    line-height: 1.6;
+    max-width: none;
+  }
+
+  .hero-actions {
+    display: flex;
+    gap: var(--space-md);
+    margin-top: var(--space-lg);
+    flex-wrap: wrap;
+  }
+
+  /* The hero screenshot tilts right-to-left on desktop */
+  @media (min-width: 900px) {
+    .hero-image.screenshot-frame img {
+      transform: rotateY(4deg) rotateX(2deg);
+      transform-origin: right center;
+    }
+
+    .hero-image.screenshot-frame:hover img {
+      transform: rotateY(1deg) rotateX(0deg);
+    }
+  }
+
+  /* ── Problem statement ─────────────────────────── */
+  .problem {
+    padding: var(--space-xl) 0;
+    border-top: 1px solid var(--color-border);
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .problem p {
+    font-family: var(--font-display);
+    font-size: clamp(1.2rem, 2vw + 0.4rem, 1.5rem);
+    font-style: italic;
+    color: var(--color-text-muted);
+    max-width: 50ch;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  /* ── Features ──────────────────────────────────── */
+  .feature-grid {
+    display: grid;
+    gap: var(--space-xl);
+    align-items: center;
+  }
+
+  @media (min-width: 768px) {
+    .feature-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .feature--reverse .feature-text {
+      order: 2;
+    }
+
+    .feature--reverse .feature-image {
+      order: 1;
+    }
+  }
+
+  .feature-text h2 {
+    margin-bottom: var(--space-md);
+  }
+
+  .feature-text p {
+    color: var(--color-text-muted);
+  }
+
+  /* ── Self-hosted ───────────────────────────────── */
+  .selfhosted {
+    text-align: center;
+  }
+
+  .selfhosted-content {
+    max-width: 480px;
+    margin: 0 auto;
+  }
+
+  .selfhosted h2 {
+    margin-bottom: var(--space-md);
+  }
+
+  .selfhosted p {
+    color: var(--color-text-muted);
+    margin: 0 auto var(--space-lg);
+  }
+
+  /* ── Blog preview ──────────────────────────────── */
+  .blog-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: var(--space-lg);
+    flex-wrap: wrap;
+    gap: var(--space-md);
+  }
+
+  .blog-header h2 {
+    margin: 0;
+  }
+
+  .blog-grid {
+    display: grid;
+    gap: var(--space-lg);
+  }
+
+  @media (min-width: 640px) {
+    .blog-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (min-width: 900px) {
+    .blog-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  /* ── CTA ───────────────────────────────────────── */
+  .cta {
+    text-align: center;
+  }
+
+  .cta h2 {
+    margin-bottom: var(--space-lg);
+  }
+
+  .cta-actions {
+    display: flex;
+    justify-content: center;
+    gap: var(--space-md);
+    flex-wrap: wrap;
+  }
+</style>
