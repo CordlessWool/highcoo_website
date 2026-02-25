@@ -5,11 +5,9 @@ import Base from '../layouts/Base.astro';
 <Base title="Page Not Found" description="The page you were looking for doesn't exist.">
   <section class="not-found">
     <div class="container">
-      <p class="eyebrow">404</p>
+      <p class="four-oh-four">404</p>
       <h1>Lost in the field</h1>
-      <p class="subtitle">
-        This page has wandered off. Probably somewhere scenic.
-      </p>
+      <p class="subtitle">This page has wandered off. Probably somewhere scenic.</p>
       <div class="actions">
         <a href="/" class="btn btn--primary">Back to home</a>
         <a href="/blog" class="btn btn--secondary">Read the blog</a>
@@ -28,32 +26,32 @@ import Base from '../layouts/Base.astro';
     max-width: 480px;
   }
 
-  .eyebrow {
+  .four-oh-four {
     font-family: var(--font-display);
-    font-size: 6rem;
+    font-size: clamp(5rem, 15vw, 9rem);
     font-weight: 300;
     color: var(--color-border);
     line-height: 1;
-    margin: 0 0 var(--space-md);
+    margin: 0 0 1rem;
     letter-spacing: -0.04em;
     max-width: none;
   }
 
   .not-found h1 {
-    font-size: clamp(2rem, 4vw + 0.5rem, 3rem);
-    margin-bottom: var(--space-md);
+    font-size: clamp(1.875rem, 4vw + 0.5rem, 2.75rem);
+    margin-bottom: 0.75rem;
   }
 
   .subtitle {
     color: var(--color-text-muted);
-    font-size: 1.1rem;
-    margin: 0 auto var(--space-xl);
+    font-size: 1.0625rem;
+    margin: 0 auto 2.5rem;
   }
 
   .actions {
     display: flex;
     justify-content: center;
-    gap: var(--space-md);
+    gap: 0.75rem;
     flex-wrap: wrap;
   }
 </style>

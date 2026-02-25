@@ -11,15 +11,14 @@ const posts = (await getCollection('blog', ({ data }) => !data.draft))
   <section class="blog-page">
     <div class="container">
       <header class="blog-page-header">
+        <p class="eyebrow">Highcoo</p>
         <h1>Blog</h1>
-        <p>Updates, guides, and thoughts on photography workflows.</p>
+        <p class="blog-desc">Updates, guides, and thoughts on photography workflows.</p>
       </header>
-      
+
       {posts.length > 0 ? (
         <div class="blog-grid">
-          {posts.map((post) => (
-            <BlogCard post={post} />
-          ))}
+          {posts.map((post) => <BlogCard post={post} />)}
         </div>
       ) : (
         <p class="no-posts">No posts yet. Check back soon.</p>
@@ -34,33 +33,31 @@ const posts = (await getCollection('blog', ({ data }) => !data.draft))
   }
 
   .blog-page-header {
-    margin-bottom: var(--space-xl);
+    margin-bottom: 3rem;
+    max-width: 540px;
   }
 
   .blog-page-header h1 {
-    margin-bottom: var(--space-sm);
+    margin-bottom: 0.5rem;
   }
 
-  .blog-page-header p {
+  .blog-desc {
     color: var(--color-text-muted);
-    font-size: 1.125rem;
+    font-size: 1.0625rem;
+    max-width: none;
   }
 
   .blog-grid {
     display: grid;
-    gap: var(--space-lg);
+    gap: 1.5rem;
   }
 
-  @media (min-width: 640px) {
-    .blog-grid {
-      grid-template-columns: repeat(2, 1fr);
-    }
+  @media (min-width: 600px) {
+    .blog-grid { grid-template-columns: repeat(2, 1fr); }
   }
 
   @media (min-width: 900px) {
-    .blog-grid {
-      grid-template-columns: repeat(3, 1fr);
-    }
+    .blog-grid { grid-template-columns: repeat(3, 1fr); }
   }
 
   .no-posts {

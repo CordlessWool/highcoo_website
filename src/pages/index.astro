@@ -10,33 +10,36 @@ const posts = (await getCollection('blog'))
 ---
 
 <Base title="Highcoo">
-  <!-- Hero -->
+
+  <!-- ── Hero ────────────────────────────────────── -->
   <section class="hero">
     <div class="container hero-grid">
       <div class="hero-content">
+        <p class="hero-eyebrow">Self-hosted &amp; open source</p>
         <h1>The backend for your photo&nbsp;blog</h1>
-        <p class="hero-subtitle">
-          Tag, organize, and publish your photos.<br />
-          Self-hosted. Open source. Yours.
+        <p class="hero-sub">
+          Tag, organize, and publish your photos from one place.
+          Your server. Your data. No subscriptions.
         </p>
         <div class="hero-actions">
           <a href="https://demo.highcoo.studio" class="btn btn--primary">View Demo</a>
-          <a href="https://docs.highcoo.studio" class="btn btn--secondary">Get Started</a>
+          <a href="https://docs.highcoo.studio" class="btn btn--ghost">Get Started →</a>
         </div>
       </div>
       <div class="hero-image screenshot-frame">
         <img
-          src="/images/highcoo-filter.jpeg"
+          src="/images/highcoo-hero.jpeg"
           alt="Highcoo media grid with tag filter open, showing highland cow photos"
           width="1390"
           height="1035"
           loading="eager"
+          decoding="async"
         />
       </div>
     </div>
   </section>
 
-  <!-- Problem -->
+  <!-- ── Problem ─────────────────────────────────── -->
   <section class="problem">
     <div class="container">
       <p>
@@ -46,66 +49,98 @@ const posts = (await getCollection('blog'))
     </div>
   </section>
 
-  <!-- Features -->
+  <!-- ── Feature 1 ───────────────────────────────── -->
   <section class="feature section">
     <div class="container">
       <div class="feature-grid">
         <div class="feature-text">
-          <h2>Tag everything. Find&nbsp;anything.</h2>
+          <p class="eyebrow">Organize</p>
+          <h2>Tag everything.<br />Find&nbsp;anything.</h2>
           <p>
-            Forget folders. Tag your images however makes sense to you — by project,
-            location, mood, subject. Filter instantly. Select in bulk.
-            Your library, finally searchable.
+            Forget folders. Tag your images however makes sense —
+            project, location, mood, subject. Filter instantly.
+            Select in bulk. Your library, finally searchable.
           </p>
         </div>
         <div class="feature-image screenshot-frame">
           <img
-            src="/images/highcoo-filter-light.jpeg"
-            alt="Highcoo tags management view showing tag organization with colors and slugs"
+            src="/images/highcoo.tag.jpeg"
+            alt="Highcoo tags management view"
             width="1390"
             height="1035"
             loading="lazy"
+            decoding="async"
           />
         </div>
       </div>
     </div>
   </section>
 
+  <!-- ── Feature 2 ───────────────────────────────── -->
   <section class="feature feature--reverse section section--alt">
     <div class="container">
       <div class="feature-grid">
         <div class="feature-text">
-          <h2>From library to&nbsp;published</h2>
+          <p class="eyebrow">Watermark</p>
+          <h2>Protect your work automatically</h2>
           <p>
-            Select a photo, fill in the details, hit publish.
-            Highcoo handles the slug, tags, and API — so your blog
-            can pull the image straight from your own server.
+            Apply consistent watermarks across your entire library.
+            No more manual edits, no more forgetting.
           </p>
         </div>
         <div class="feature-image screenshot-frame">
           <img
-            src="/images/highcoo-edit.jpeg"
-            alt="Highcoo publish dialog for a highland cow photo, showing name, slug, and tag fields"
-            width="1431"
-            height="1294"
+            src="https://stable.highcoo.studio/coo/cattle-thounge/w/800"
+            alt="Highcoo watermarked photo of a highland cow"
+            width="800"
+            height="600"
             loading="lazy"
+            decoding="async"
           />
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Self-hosted callout -->
-  <section class="selfhosted section">
+  <!-- ── Feature 3 ───────────────────────────────── -->
+  <section class="feature section">
+    <div class="container">
+      <div class="feature-grid">
+        <div class="feature-text">
+          <p class="eyebrow">Publish</p>
+          <h2>From library to&nbsp;published</h2>
+          <p>
+            Select a photo, fill in the details, hit publish.
+            Highcoo handles the slug, tags, and API so your blog
+            can pull images straight from your own server.
+          </p>
+        </div>
+        <div class="feature-image screenshot-frame">
+          <img
+            src="/images/highcoo-filter-tag-publish.jpeg"
+            alt="Highcoo publish dialog showing name, slug, and tag fields"
+            width="1431"
+            height="1294"
+            loading="lazy"
+            decoding="async"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Self-hosted ──────────────────────────────── -->
+  <section class="selfhosted section section--dark">
     <div class="container">
       <div class="selfhosted-content">
+        <img src="/images/logo.png" alt="" width="44" height="44" aria-hidden="true" class="selfhosted-icon" />
         <h2>Your photos, your&nbsp;server</h2>
         <p>
-          No subscriptions. No vendor lock-in. Host it yourself, own your data,
-          inspect the code. Free forever.
+          No subscriptions. No vendor lock-in. Host it yourself,
+          own your data, inspect every line of code. Free forever.
         </p>
-        <a href="https://github.com/your-username/highcoo" class="btn btn--secondary">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+        <a href="https://github.com/your-username/highcoo" class="btn btn--ghost">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
             <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
           </svg>
           View on GitHub
@@ -114,13 +149,13 @@ const posts = (await getCollection('blog'))
     </div>
   </section>
 
-  <!-- Blog preview -->
+  <!-- ── Blog preview ─────────────────────────────── -->
   {posts.length > 0 && (
-    <section class="blog-preview section section--alt">
+    <section class="blog-preview section">
       <div class="container">
         <div class="blog-header">
           <h2>From the blog</h2>
-          <a href="/blog">All posts →</a>
+          <a href="/blog" class="view-all">All posts →</a>
         </div>
         <div class="blog-grid">
           {posts.map((post) => <BlogCard post={post} />)}
@@ -129,10 +164,11 @@ const posts = (await getCollection('blog'))
     </section>
   )}
 
-  <!-- Final CTA -->
-  <section class="cta section">
+  <!-- ── CTA ──────────────────────────────────────── -->
+  <section class="cta section section--alt">
     <div class="container">
       <h2>Ready to get started?</h2>
+      <p>Free, open source, and running in minutes.</p>
       <div class="cta-actions">
         <a href="https://github.com/your-username/highcoo" class="btn btn--primary">GitHub</a>
         <a href="https://docs.highcoo.studio" class="btn btn--secondary">Documentation</a>
@@ -140,168 +176,206 @@ const posts = (await getCollection('blog'))
       </div>
     </div>
   </section>
+
 </Base>
 
 <style>
-  /* ── Hero ──────────────────────────────────────── */
+  /* ── Hero ────────────────────────────────────────── */
   .hero {
-    padding: var(--space-2xl) 0 var(--space-xl);
+    background: var(--color-hero-bg);
+    color: var(--color-hero-text);
+    padding: 5rem 0 0;
     overflow: hidden;
   }
 
   .hero-grid {
     display: grid;
-    gap: var(--space-xl);
-    align-items: center;
+    gap: 3rem;
+    align-items: flex-end;
   }
 
   @media (min-width: 900px) {
     .hero-grid {
-      grid-template-columns: 1fr 1.2fr;
-      gap: var(--space-2xl);
+      grid-template-columns: 1fr 1.25fr;
+      gap: 4rem;
     }
   }
 
   .hero-content {
-    max-width: 560px;
+    max-width: 500px;
+    padding-bottom: 5rem;
   }
 
-  .hero-subtitle {
-    font-size: 1.2rem;
-    color: var(--color-text-muted);
-    margin-top: var(--space-md);
-    line-height: 1.6;
+  @media (max-width: 899px) {
+    .hero-content { padding-bottom: 0; }
+  }
+
+  .hero-eyebrow {
+    display: inline-block;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--color-accent-on-dark);
+    margin-bottom: 1rem;
+  }
+
+  .hero h1 {
+    color: var(--color-hero-text);
+    margin-bottom: 1.25rem;
+  }
+
+  .hero-sub {
+    font-size: 1.0625rem;
+    color: rgba(240, 239, 237, 0.55);
+    line-height: 1.65;
     max-width: none;
+    margin-bottom: 2rem;
   }
 
   .hero-actions {
     display: flex;
-    gap: var(--space-md);
-    margin-top: var(--space-lg);
+    gap: 0.625rem;
     flex-wrap: wrap;
   }
 
-  /* The hero screenshot tilts right-to-left on desktop */
+  /* Image sits flush to bottom, slightly cropped at top by overflow:hidden */
+  .hero-image {
+    align-self: flex-end;
+  }
+
   @media (min-width: 900px) {
     .hero-image.screenshot-frame img {
-      transform: rotateY(4deg) rotateX(2deg);
-      transform-origin: right center;
+      transform: rotateY(2.5deg) rotateX(1deg);
+      transform-origin: right bottom;
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
     }
-
     .hero-image.screenshot-frame:hover img {
-      transform: rotateY(1deg) rotateX(0deg);
+      transform: rotateY(0.5deg) rotateX(0deg);
     }
   }
 
-  /* ── Problem statement ─────────────────────────── */
+  /* ── Problem ─────────────────────────────────────── */
   .problem {
-    padding: var(--space-xl) 0;
-    border-top: 1px solid var(--color-border);
-    border-bottom: 1px solid var(--color-border);
+    padding: 3.5rem 0;
+    border-bottom: 1px solid var(--color-border-subtle);
   }
 
   .problem p {
     font-family: var(--font-display);
-    font-size: clamp(1.2rem, 2vw + 0.4rem, 1.5rem);
+    font-size: clamp(1.2rem, 2vw + 0.4rem, 1.625rem);
     font-style: italic;
+    font-weight: 300;
     color: var(--color-text-muted);
-    max-width: 50ch;
+    max-width: 54ch;
     margin: 0 auto;
     text-align: center;
+    line-height: 1.5;
   }
 
-  /* ── Features ──────────────────────────────────── */
+  /* ── Features ────────────────────────────────────── */
   .feature-grid {
     display: grid;
-    gap: var(--space-xl);
+    gap: 3rem;
     align-items: center;
   }
 
-  @media (min-width: 768px) {
+  @media (min-width: 780px) {
     .feature-grid {
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1.1fr;
+      gap: 4rem;
     }
-
-    .feature--reverse .feature-text {
-      order: 2;
-    }
-
-    .feature--reverse .feature-image {
-      order: 1;
-    }
+    .feature--reverse .feature-text { order: 2; }
+    .feature--reverse .feature-image { order: 1; }
   }
 
   .feature-text h2 {
-    margin-bottom: var(--space-md);
+    margin: 0.5rem 0 1rem;
   }
 
   .feature-text p {
     color: var(--color-text-muted);
+    font-size: 1rem;
+    line-height: 1.7;
+    max-width: 44ch;
   }
 
-  /* ── Self-hosted ───────────────────────────────── */
-  .selfhosted {
-    text-align: center;
-  }
+  /* ── Self-hosted ─────────────────────────────────── */
+  .selfhosted { text-align: center; }
 
   .selfhosted-content {
-    max-width: 480px;
+    max-width: 440px;
     margin: 0 auto;
   }
 
+  .selfhosted-icon {
+    display: block;
+    margin: 0 auto 1.5rem;
+    opacity: 0.9;
+    filter: brightness(1.5) saturate(0.8);
+  }
+
   .selfhosted h2 {
-    margin-bottom: var(--space-md);
+    color: var(--color-hero-text);
+    margin-bottom: 1rem;
   }
 
   .selfhosted p {
-    color: var(--color-text-muted);
-    margin: 0 auto var(--space-lg);
+    color: rgba(240, 239, 237, 0.5);
+    margin: 0 auto 2rem;
+    font-size: 1rem;
+    line-height: 1.7;
+    max-width: none;
   }
 
-  /* ── Blog preview ──────────────────────────────── */
+  /* ── Blog preview ────────────────────────────────── */
   .blog-header {
     display: flex;
     justify-content: space-between;
     align-items: baseline;
-    margin-bottom: var(--space-lg);
+    margin-bottom: 2rem;
     flex-wrap: wrap;
-    gap: var(--space-md);
+    gap: 1rem;
   }
 
-  .blog-header h2 {
-    margin: 0;
+  .blog-header h2 { margin: 0; }
+
+  .view-all {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--color-text-muted);
+    text-decoration: none;
   }
+  .view-all:hover { color: var(--color-text); }
 
   .blog-grid {
     display: grid;
-    gap: var(--space-lg);
+    gap: 1rem;
   }
 
-  @media (min-width: 640px) {
-    .blog-grid {
-      grid-template-columns: repeat(2, 1fr);
-    }
+  @media (min-width: 600px) {
+    .blog-grid { grid-template-columns: repeat(2, 1fr); }
   }
-
   @media (min-width: 900px) {
-    .blog-grid {
-      grid-template-columns: repeat(3, 1fr);
-    }
+    .blog-grid { grid-template-columns: repeat(3, 1fr); }
   }
 
-  /* ── CTA ───────────────────────────────────────── */
-  .cta {
-    text-align: center;
-  }
+  /* ── CTA ─────────────────────────────────────────── */
+  .cta { text-align: center; }
 
-  .cta h2 {
-    margin-bottom: var(--space-lg);
+  .cta h2 { margin-bottom: 0.5rem; }
+
+  .cta p {
+    color: var(--color-text-muted);
+    font-size: 1rem;
+    margin: 0 auto 2rem;
   }
 
   .cta-actions {
     display: flex;
     justify-content: center;
-    gap: var(--space-md);
+    gap: 0.625rem;
     flex-wrap: wrap;
   }
 </style>
