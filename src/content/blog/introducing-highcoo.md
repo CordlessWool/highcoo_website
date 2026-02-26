@@ -24,6 +24,6 @@ It's not trying to replace Lightroom or Capture One. Those are editing tools. Hi
 
 Highcoo is still early. The core is solid: tagging, filtering, bulk operations, watermarking. But there's more to come.
 
-If you're a photographer who's tired of the gap between "edited" and "published," give it a try. Check out the [demo](https://demo.highcoo.studio), read the [docs](https://docs.highcoo.studio), or grab the code from [GitHub](https://github.com/your-username/highcoo).
+If you're a photographer who's tired of the gap between "edited" and "published," give it a try. Check out the [demo](https://demo.highcoo.studio), read the [docs](https://docs.highcoo.studio), or grab the code from [GitHub](https://github.com/CordlessWool/highcoo).
 
 Your photos deserve to be seen.

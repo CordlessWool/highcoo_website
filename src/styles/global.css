@@ -144,7 +144,7 @@ code {
 }
 
 .section {
-    padding: var(--space-2xl) 0;
+    padding: var(--space-xl) 0;
 }
 .section--alt {
     background: var(--color-bg-alt);
