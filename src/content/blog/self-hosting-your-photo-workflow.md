@@ -1,7 +1,7 @@
 ---
 title: "Why I Self-Host My Photo Workflow"
 description: "The case for owning your creative infrastructure — no subscriptions, no surprises."
-date: 2024-03-10
+date: 2024-02-25
 ---
 
 Three months after launching Highcoo, I want to write down something that's been rattling around in my head: the case for self-hosting your creative tools.
@@ -28,6 +28,6 @@ The goal was never to lock anyone in. It was to make the step from "edited" to "
 
 ## Getting started
 
-If you want to try it, the [documentation](https://docs.highcoo.studio) covers setup. The [demo](https://demo.highcoo.studio) gives you a feel for the interface before you commit to anything.
+If you want to try it, the [setup guide](/blog/getting-started-with-highcoo). The [demo](https://pasture.highcoo.studio) gives you a feel for the interface before you commit to anything.
 
 Your photos are worth keeping. They deserve infrastructure that's worth keeping too.

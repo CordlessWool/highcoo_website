@@ -1,7 +1,7 @@
 ---
 title: "Introducing Highcoo"
 description: "Why I built a tag-based photo management tool, and what it can do for your workflow."
-date: 2024-01-15
+date: 2024-02-24
 ---
 
 It started on a winter day, helping a friend figure out how to finally publish her photos. We'd just come back from photographing highland cows—beautiful shots, full of personality. But like so many photographers, those images were sitting on a hard drive, gathering digital dust.
@@ -18,12 +18,12 @@ Highcoo is a self-hosted backend for managing your photo library. It's designed 
 - **Apply watermarks consistently** — No more manual edits or forgotten protection.
 - **Own their workflow** — Self-hosted, open source, no subscriptions.
 
-It's not trying to replace Lightroom or Capture One. Those are editing tools. Highcoo is what happens *after* editing—when you need to actually get your photos out into the world.
+It's not trying to replace Lightroom or Capture One. Those are editing tools. Highcoo is what happens _after_ editing—when you need to actually get your photos out into the world.
 
 ## What's next
 
 Highcoo is still early. The core is solid: tagging, filtering, bulk operations, watermarking. But there's more to come.
 
-If you're a photographer who's tired of the gap between "edited" and "published," give it a try. Check out the [demo](https://demo.highcoo.studio), read the [docs](https://docs.highcoo.studio), or grab the code from [GitHub](https://github.com/CordlessWool/highcoo).
+If you're a photographer who's tired of the gap between "edited" and "published," give it a try. Check out the [demo](https://pasture.highcoo.studio), read the [setup guide](/blog/getting-started-with-highcoo), or grab the code from [GitHub](https://github.com/CordlessWool/highcoo).
 
 Your photos deserve to be seen.

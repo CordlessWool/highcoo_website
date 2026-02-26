@@ -65,4 +65,4 @@ Output will be in `dist/`. Deploy to any static host (Vercel, Netlify, Cloudflar
 
 - `highcoo.studio` — This site
 - `docs.highcoo.studio` — Documentation (separate repo/build)
-- `demo.highcoo.studio` — Live demo instance
+- `pasture.highcoo.studio` — Live demo instance
