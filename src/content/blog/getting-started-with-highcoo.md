@@ -195,9 +195,7 @@ Common widths: `480` for thumbnails, `1080` for cards, `2048` for full-size. Any
 
 ## What's Next
 
-Explore the live demo at [demo.highcoo.studio](https://demo.highcoo.studio) to get a feel for the interface before diving in — it's a real instance with sample photos.
-
-Full documentation is at [docs.highcoo.studio](https://docs.highcoo.studio).
+Explore the live demo at [pasture.highcoo.studio](https://pasture.highcoo.studio) to get a feel for the interface before diving in — it's a real instance with sample photos.
 
 If something breaks or a step in this guide is unclear, [open an issue on GitHub](https://github.com/CordlessWool/highcoo/issues). Highcoo is early-stage and actively developed, and honest feedback directly shapes what gets fixed and built next.
 
