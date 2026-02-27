@@ -4,13 +4,15 @@ description: "The case for owning your creative infrastructure — no subscripti
 date: 2024-02-25
 ---
 
-Three months after launching Highcoo, I want to write down something that's been rattling around in my head: the case for self-hosting your creative tools.
+I wanted independence.
 
-This isn't a rant against cloud software. Some of it is genuinely excellent. But I've watched too many photographers lose access to years of organized work because a service raised prices, changed terms, or simply shut down. That shouldn't happen.
+When you control your own infrastructure, no one can hold you hostage. No surprise price hikes, no changed terms, no "we're shutting down."
+
+That's not a rant against cloud software — I'm a developer myself, I know the effort that goes into building good software. Some of it is excellent. But for something as personal as a photo library, I wanted it on my terms.
 
 ## What self-hosting actually means
 
-Self-hosting means running software on hardware you control — a VPS, a home server, an old laptop in a corner. The software stores your data where you tell it to. You can back it up. You can move it. You own it.
+Self-hosting means running software on hardware you control — a VPS, a home server, a Raspberry Pi in a corner. The software stores your data where you tell it to. You can back it up. You can move it. You own it.
 
 For something as personal as a photo library, this matters more than people realize.
 
@@ -18,7 +20,9 @@ For something as personal as a photo library, this matters more than people real
 
 I'm not opposed to paying for software. I pay for tools I use every day. But the model where you pay monthly and lose everything if you stop — that's a bad deal for any long-term archive.
 
-Photography is a long-term archive. The shots from five years ago are still worth keeping.
+Most photographers aren't making money from their photos. They share because they care about the work. Paying monthly just to keep that accessible — and losing it when you stop — doesn't make sense.
+
+If you think tools like Highcoo should exist and stay free, consider [supporting the project](https://github.com/sponsors/CordlessWool). It keeps development going.
 
 ## What Highcoo does differently
 
@@ -26,8 +30,10 @@ Highcoo runs wherever you have a server. The data is yours — standard files on
 
 The goal was never to lock anyone in. It was to make the step from "edited" to "published" faster and less annoying, for as long as you want to use it.
 
+That's why Highcoo will stay open source forever.
+
 ## Getting started
 
-If you want to try it, the [setup guide](/blog/getting-started-with-highcoo). The [demo](https://pasture.highcoo.studio) gives you a feel for the interface before you commit to anything.
+If you want to try it, check the [setup guide](/blog/getting-started-with-highcoo). The [demo](https://pasture.highcoo.studio) gives you a feel for the interface before you commit to anything.
 
 Your photos are worth keeping. They deserve infrastructure that's worth keeping too.
